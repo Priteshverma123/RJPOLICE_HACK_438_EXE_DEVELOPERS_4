@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="new logo.png" type="png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law-Craft</title>
+    <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+    <nav>
+        <div class="navlogo">
+            <img src="images/LawCraft-logo-black.png" alt="" style="width:200px;" height="90px">
+        </div>
+        <div id="nav-part2">
+            <h4><a href="index.html">Home</a></h4>
+            <h4><a href="FIR.html">F.I.R Draft</a></h4>
+            <h4><a href="data.html">Knowledge Base</a></h4>
+            <h4><a href="feedback.css">Feedback</a></h4>
+        </div>
+        <h3>Menu</h3>
+    </nav>
+    <div class="main">
+        <div class="sidebar">
+            <div class="icon1">
+             <a href="index.html#page1">
+                <lord-icon
+    src="https://cdn.lordicon.com/wmwqvixz.json"
+    trigger="hover"
+    style="width:35px;height:35px">
+</lord-icon>
+        </a>
+        <a href="index.html"><h4>Home</h4></a>
+        </div>
+
+        <div class="icon2">
+           <a href="#typeform">
+                <lord-icon
+                src="https://cdn.lordicon.com/xljvqlng.json"
+                trigger="hover"
+                style="width:35px;height:35px">
+                </lord-icon>
+           </a>
+           <a href="#typeform"><h4>Type Complaint</h4></a>
+        </div>
+
+        <div class="icon3">
+            <a href="#englishocr">
+                <lord-icon
+                    src="https://cdn.lordicon.com/fowixcuo.json"
+                    trigger="hover"
+                    style="width:35px;height:35px">
+                </lord-icon>
+            </a>
+            <a href="#englishocr"><h4>Upload in English</h4></a>
+            </div>
+
+            <div class="icon4">
+                <a href="#hindiocr">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/fowixcuo.json"
+                        trigger="hover"
+                        style="width:35px;height:35px">
+                    </lord-icon>
+                </a>
+                <a href="#hindiocr"><h4>Upload in Hindi</h4></a>
+            </div>
+            <div class="icon5">
+                <a>
+                    <lord-icon
+                    src="https://cdn.lordicon.com/ojnjgkun.json"
+                    trigger="hover"
+                    style="width:35px;height:35px">
+                    </lord-icon>
+                </a>
+                <h4>Help Centre</h4>
+            </div>
+            <div class="icon6">
+                <a>
+                    <lord-icon
+                    src="https://cdn.lordicon.com/lznlxwtc.json"
+                    trigger="hover"
+                    style="width:40px;height: 40pxpx">
+                    </lord-icon>
+                </a>
+                <h4>Notifications</h4>
+            </div>
+        </div>
+
+        <div class="rightbar">
+            <section id="typeform">
+                <h2>Complaint Form</h2>
+                <hr>
+
+    <form action="#" method="post">
+        <div class="box">
+        <label for="fullName">Full Name:</label>
+        <input class="restinput" type="text" id="fullName" name="fullName" required placeholder="Pritesh Jayprakash Verma">
+        </div>
+
+        <div class="box">
+        <label for="phoneNumber">Phone Number:</label>
+        <input class="restinput" type="tel" id="phoneNumber" name="phoneNumber" required placeholder="9167XXXXXX">
+        </div>
+
+        <div class="box">
+        <label for="email">Email:</label>
+        <input class="restinput" type="email" id="email" name="email" placeholder="xyz@gmail.com">
+        </div>
+
+        <div class="box">
+        <label for="address">Room/Street No.:</label>
+        <input class="restinput" type="text" id="address" name="address" required placeholder="403,bld no. 7">
+        </div>
+
+        <div class="box">
+            <label for="address">Address:</label>
+            <input class="restinput" type="text" id="address" name="address" required placeholder="gokuldham, goregaon east">
+        </div>
+
+        <div class="box">
+            <label for="address">Pincode:</label>
+            <input class="restinput" type="number" id="address" name="address" required placeholder="400063">
+        </div>
+
+        <div class="addbox">
+        <label for="state">State:</label>
+        <input class="addinput" type="text" id="state" name="state" required placeholder="Maharashtra">
+        </div>
+
+        <div class="addbox">
+        <label for="country">Country:</label>
+        <input class="addinput" type="text" id="country" name="country" required placeholder="India">
+        </div>
+
+        <div class="datebox">
+        <label for="incidentDate">Date of Incident:</label>
+        <input class="dateinput" type="date" id="incidentDate" name="incidentDate" required>
+    </div>
+
+        <div class="datebox">
+        <label for="complaintDate">Date of Complaint:</label>
+        <input class="dateinput" type="date" id="complaintDate" name="complaintDate" required>
+        </div>
+        
+        <label for="complaint"></h3></label>
+        <textarea id="complaint" name="complaint" rows="4" required placeholder="Complaint"></textarea>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+            </section>
+            <hr>
+        
+            <!-- Section: english OCR -->
+            <section id="englishocr">
+                <h2>Upload Complaint in English</h2>
+                <form id="uploadimageform" action="/" method="post">
+                    <label for="image">Choose an image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <button class="uploadbutton" type="button" onclick="uploadImage()">Upload Image</button>
+                </form>
+                <div id="imagePreview">
+
+                </div>
+                <div class="divbtn">
+                <button class="submitbutton" type="submit">Submit Complaint</button>
+                </div>
+            </section>
+            <hr>
+        
+            <!-- Section: hindi OCR -->
+            <section id="hindiocr">
+                <h2>Upload Complaint in Hindi</h2>
+                <form id="uploadimageform" action="/" method="post">
+                    <label for="image">Choose an image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <button class="uploadbutton" type="button" onclick="uploadImage()">Upload Image</button>
+                </form>
+                <div id="imagePreview">
+
+                </div>
+                <div class="divbtn">
+                <button class="submitbutton" type="submit">Submit Complaint</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="complaint.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html>
