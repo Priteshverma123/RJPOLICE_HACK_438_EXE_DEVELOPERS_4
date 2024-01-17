@@ -53,7 +53,7 @@ function loaderAnimation() {
     var loader = document.querySelector("#loader")
     setTimeout(function () {
         loader.style.top = "-100%"
-    }, 1500)
+    }, 3000)
 }
 
 swiperAnimation()
