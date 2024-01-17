@@ -10,38 +10,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-        body{
-            margin:0px;
+        body {
+            margin: 0;
             background: #242424;
         }
-        #main{
+    
+        #main {
             width: 100%;
             height: 100%;
             position: absolute;
             overflow: hidden;
             background-image: url('land back.webp');
         }
-        #box2{
-            width: 400px;
-            height: 450px;
+    
+        #box2 {
+            width: 80%; /* Adjusted width for responsiveness */
+            max-width: 400px; /* Added max-width to ensure it doesn't get too wide */
+            height: 55%; /* Changed height to auto for responsiveness */
             font-family: 'Bahnschrift Condensed';
             color: white;
             font-size: 1rem;
             font-weight: 500;
             line-height: 130px;
             position: absolute;
-            top: 200px;
-            left: 100px;
+            top: 10%; /* Adjusted top position for responsiveness */
+            left: 50%; /* Centered horizontally */
+            transform: translateX(-50%); /* Centered horizontally */
             overflow: hidden;
             border-radius: 30px;
             display: flex;
             justify-content: center;
+            align-items: center;
+            margin-top: 6%;
             backdrop-filter: blur(20px);
-            margin-left: 500px;
-            margin-bottom: 100px;
+            margin-bottom: 10%; /* Adjusted margin for responsiveness */
         }
-        #box2 button{
+    
+        #box2 button {
+            width: 100%; /* Adjusted width for responsiveness */
             width: 300px;
+            max-width: 500px; /* Added max-width to ensure it doesn't get too wide */
             height: 50px;
             display: flex;
             justify-content: center;
@@ -51,36 +59,50 @@
             font-size: 1rem;
             cursor: pointer;
         }
-        #box2 button:hover{
+    
+        #box2 button:hover {
             background-color: rgba(203, 172, 32, 0.905);
         }
-        #box2 a{
+    
+        #box2 a {
             text-decoration: none;
             display: flex;
             align-items: center;
         }
-        /* #lanbox{
-            width: 300px;
-            height: 100px;
-            border: 1px solid black;
-            font-size: 1rem;
-        } */
-        #box3 img{
-            width: 250px;
-            height: 130px;
+    
+        #box3 img {
+            width: 20%; /* Made the image responsive */
+            height: auto; /* Made the image responsive */
             display: flex;
-            justify-self: center;
-            margin-left: 650px;
-            background-repeat: no-repeat;
+            margin-left: 40%;
+            margin-top: 10px; /* Adjusted margin for responsiveness */
+            justify-content: center;
             background-size: cover;
-            object-fit: cover;
+            background-repeat: no-repeat;
+            
         }
-        #box2 h2{
+    
+        #box2 h2 {
             display: flex;
             justify-content: center;
             font-weight: 900;
         }
-    </style>
+    
+        @media only screen and (max-width: 600px) {
+            /* Add specific styles for screens with a maximum width of 600px or smaller */
+            #box2 {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            #box2 button {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>    
 </head>
 <body>
     <div id="main">
