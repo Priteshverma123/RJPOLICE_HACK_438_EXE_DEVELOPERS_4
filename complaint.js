@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 function uploadImage() {
     var input = document.getElementById('image');
     var preview = document.getElementById('imagePreview');
