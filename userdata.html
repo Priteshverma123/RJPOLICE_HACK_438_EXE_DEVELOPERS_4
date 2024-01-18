@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Law-Craft</title>
     <link rel="stylesheet" href="userdata.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/tasks@latest/dist/tfjs-tasks.min.js"></script>
 </head>
 <body>
     <nav>
@@ -18,5 +19,55 @@
         </div>
         <h3>Menu</h3>
     </nav>
+
+    <hr>
+    <h1>tensorflow inteference</h1>
+    <textarea id="userInput" placeholder="Enter your input"></textarea>
+    <button onclick="performInference()">Submit</button>
+
+    <script>
+        // Load the TensorFlow Lite model
+        async function loadModel() {
+            const modelPath = 'D:\WEB DEVELOPMENT\LAWCRAFT MAIN\ml\model (1).tflite'; // Replace with your model path
+            const model = await tf.loadGraphModel(modelPath);
+            return model;
+        }
+    
+        // Perform inference on user input
+        async function performInference() {
+            const userInput = document.getElementById('userInput').value;
+            
+            // Make sure to preprocess 'userInput' if needed
+    
+            // Load the model if not loaded already
+            if (!window.loadedModel) {
+                window.loadedModel = await loadModel();
+            }
+    
+            // Perform inference
+            const result = await infer(userInput);
+    
+            // Display the result (replace this with your logic)
+            alert('Model Output: ' + result);
+        }
+    
+        // Inference function
+        async function infer(inputData) {
+            // Convert input data to a TensorFlow.js tensor (modify based on your model's input requirements)
+            const inputTensor = tf.tensor([inputData]);
+    
+            // Run inference
+            const output = window.loadedModel.executeAsync(inputTensor);
+    
+            // Get the result
+            const result = await output;
+    
+            // Clean up
+            inputTensor.dispose();
+            output.dispose();
+    
+            return result;
+        }
+    </script>
 </body>
 </html>
