@@ -10,7 +10,7 @@
 <body>
     <nav>
         <div class="navlogo">
-            <img src="images/LawCraft-logo-black.png" alt="" style="width:200px;" height="90px">
+            <img src="images/LawCraft-logo-black.png" alt="" style="width:150px;" height="90px;">
         </div>
         <div id="nav-part2">
             <h4><a href="policehome.html">Home</a></h4>
@@ -21,21 +21,58 @@
         <h3>Menu</h3>
     </nav>
     <aside>
-        <h3>Sidebar</h3>
         <ul>
-            <li><a href="#ipcSection">IPC Section</a></li>
-            <li><a href="#crpcSection">CrPC Section</a></li>
-            <li>
-                <label for="stateSelector">State Law Acts:</label>
-                <select id="stateSelector">
-                    <!-- Add options for different states -->
-                    <option value="state1">State 1</option>
-                    <option value="state2">State 2</option>
-                    <!-- Add more states as needed -->
-                </select>
-            </li>
-            <li><a href="#indianEvidenceAct">Indian Evidence Act</a></li>
+            <li><lord-icon
+                src="https://cdn.lordicon.com/hrjifpbq.json"
+                trigger="hover"
+                style="width:30px;height: 30px">
+            </lord-icon><a href="#page1">Assitant</a></li>
+            <li><lord-icon
+                src="https://cdn.lordicon.com/omiqopzf.json"
+                trigger="hover"
+                style="width:30px;height:30px">
+            </lord-icon><a href="#page2">IPC/CRPC Section</a></li>
+            <li><lord-icon
+                src="https://cdn.lordicon.com/depeqmsz.json"
+                trigger="hover"
+                style="width:30px;height:30px">
+            </lord-icon><a href="#page4">Indian Evidence Act</a></li>
         </ul>
     </aside>
+    <div class="scroll-container">
+        <section class="page" id="page1">
+            <div class="chatback">
+                <div class="chat">
+                    <textarea id="userInput" placeholder="Type your message..."></textarea>
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="page2">Page 2</section>
+        <section class="page" id="page4">Page 3</section>
+    </div>
+    <script>
+        let currentPage = 0;
+const totalPages = 4; // Adjust this based on the number of pages
+
+function scrollToPage(page) {
+    const scrollContainer = document.querySelector('.scroll-container');
+    const pageWidth = 100 / totalPages;
+    const newPosition = -page * pageWidth;
+
+    scrollContainer.style.transform = `translateX(${newPosition}%)`;
+    currentPage = page;
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight' && currentPage < totalPages - 1) {
+        scrollToPage(currentPage + 1);
+    } else if (event.key === 'ArrowLeft' && currentPage > 0) {
+        scrollToPage(currentPage - 1);
+    }
+});
+
+    </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>    
 </body>
 </html>

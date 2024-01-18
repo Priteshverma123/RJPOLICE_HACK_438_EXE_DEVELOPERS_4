@@ -29,12 +29,16 @@ html, body {
 nav {
     padding: 1vw 2vw;
     width: 100%;
-    height: 100px;
+    height: 15%;
     display: flex;
     align-items: center;
     position: fixed;
     z-index: 1000;
     justify-content: space-between;
+}
+.navlogo{
+    margin-right: 10%;
+    width: 15%;
 }
 #nav-part2 {
     display: flex;
@@ -86,12 +90,103 @@ nav h3 {
 }
 /* Sidebar Styles */
 aside {
-    background-color: #f2f2f2;
     padding: 20px;
-    width: 200px;
+    width: 13%;
     height: 100%;
-    position: fixed;
-    top: 60px; /* Adjust based on your navbar's height */
+    background-color: #ba956290;
+    z-index: 10px;
+    position: fixed;/* Adjust based on your navbar's height */
     left: 0;
     overflow-y: auto;
+    display: flex;
+    /* margin-top: 60px; */
+    border-radius: 0 40px 40px 0;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+}
+aside li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 60%;
+        
+}
+aside a{
+    text-decoration: none;
+    color: black;
+}
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    width: 300%; /* 100% * number of pages */
+    height: 100vh;
+    transition: transform 0.5s ease;
+}
+
+.page {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-size: 2em;
+    border: 1px solid #ccc;
+}
+#page1{
+    width: 70vh;
+    height: auto;
+}
+
+.chatback{
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: end;
+    border-radius: 30px;
+    margin-top: 8%;
+    margin-left: 13%;
+    background: url("images/chatback.jpg");
+    
+}
+.chat{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: end;
+}
+textarea {
+    width: 70%;
+    padding: 10px;
+    height: 20%;
+    border: 1px solid #070707;
+    border-radius: 5px;
+    border-radius: 20px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    font-size: 1rem;
+    border: 1px solid white;
+}
+button {
+    margin-left: 10px;
+    height: 15%;
+    width: 15%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 2%;
+    font-size: 1rem;
+}
+button:hover{
+    background-color: #28862b;
+}
+#page2{
+    background-color: aqua;
+}
+#page4{
+    background-color: blueviolet;
 }
